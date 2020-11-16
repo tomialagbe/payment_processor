@@ -19,25 +19,30 @@ To build the applications run the following command from the projects root direc
 sh ./setup-dependencies.sh
 ````
 
-######Start the API Server
+#
+####Starting the services
+The services should be started on separate terminals.
+
+######The API Server
 To start the API Server (Source), run:
 ````
 sh ./run-api.sh
 ````
 
-######Start the Tokenizer service
+######The Tokenizer service
 To start the Tokenizer Service (Data Sink), run:
 ````
 sh ./run-tokenizer.sh
 ````
 
-######Start the Consumer service
+######The Consumer service
 To start the consumer service (Proof), run:
 ````
 sh ./run-consumer.sh
 ````
 
 #
+####Testing
 ######Make a request
 Now, you can send a card auth request to the API server which runs on http://localhost:1001.
 
