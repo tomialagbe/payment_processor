@@ -19,7 +19,7 @@
         </plugins>
     </build>
     <name>${project.groupId}:${project.artifactId}</name>
-    <packaging>pom</packaging>
+    <!--<packaging>jar</packaging>-->
 
     <properties>
         <dropwizard.version>2.0.15</dropwizard.version>
