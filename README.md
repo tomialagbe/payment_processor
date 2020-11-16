@@ -1,6 +1,6 @@
 ## How to run
 
-####Setup the Environment
+######Setup the Environment
 The following services are required to run the app
 - Redis
 - Zookeeper
@@ -13,32 +13,32 @@ You can start them by running
 docker-compose up
 ````
 
-####Build The Applications
+######Build The Applications
 To build the applications run the following command from the projects root directory.
 ````
 sh ./setup-dependencies.sh
 ````
 
-####Start the API Server
+######Start the API Server
 To start the API Server (Source), run:
 ````
 sh ./run-api.sh
 ````
 
-####Start the Tokenizer service
+######Start the Tokenizer service
 To start the Tokenizer Service (Data Sink), run:
 ````
 sh ./run-tokenizer.sh
 ````
 
-####Start the Consumer service
+######Start the Consumer service
 To start the consumer service (Proof), run:
 ````
 sh ./run-consumer.sh
 ````
 
 #
-####Make a request
+######Make a request
 Now, you can send a card auth request to the API server which runs on http://localhost:1001.
 
 The HTTP request url should be:
