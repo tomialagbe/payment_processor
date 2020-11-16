@@ -1,0 +1,29 @@
+server:
+  type: default
+  applicationConnectors:
+    - type: http
+      port: 1005
+  adminConnectors:
+    - type: http
+      port: 1006
+
+kafka-consumer:
+  bootstrapServer: 127.0.0.1:9092
+  groupId: consumerGroup
+  topic: data-output
+  deserializerClass: com.tomi.payments.domain.Token
+
+redis-client:
+  type: basic
+  name: token-key-store
+  redisCodec:
+    type: string
+  node:
+    type: redis
+    node: "127.0.0.1:6379"
+    clientName: payment-processor
+  clientResources:
+    type: default
+    commandLatencyCollector:
+      type: default
+      enabled: false

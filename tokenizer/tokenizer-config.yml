@@ -1,0 +1,38 @@
+server:
+  type: default
+  applicationConnectors:
+    - type: http
+      port: 1003
+  adminConnectors:
+    - type: http
+      port: 1004
+
+kafka-producer:
+  bootstrapServer: 127.0.0.1:9092
+  topic: data-output
+  acks: all
+  retries: 2147483647
+  maxInFlightRequestsPerConnection: 1
+  maxPollBlockTime: 10s
+
+kafka-consumer:
+  bootstrapServer: 127.0.0.1:9092
+  groupId: consumerGroup
+  topic: data-input
+  deserializerClass: com.tomi.payments.domain.CardTransaction
+
+
+redis-client:
+  type: basic
+  name: token-key-store
+  node:
+    type: redis
+    node: "127.0.0.1:6379"
+    clientName: payment-processor
+  redisCodec:
+    type: string
+  clientResources:
+    type: default
+    commandLatencyCollector:
+      type: default
+      enabled: false
