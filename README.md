@@ -13,10 +13,18 @@ You can start them by running
 docker-compose up
 ````
 
+###### Setup Dependencies (Kafka Topics)
+To setup the kafka topics, run: 
+
+````
+sh ./setup-dependencies.sh
+````
+
+
 ###### Build The Applications
 To build the applications run the following command from the projects root directory.
 ````
-sh ./setup-dependencies.sh
+sh ./build-packages.sh
 ````
 
 #
